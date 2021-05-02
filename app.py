@@ -6,11 +6,11 @@ Created on Fri April 09 08:02:27 2021
 @author: Aakash
 """
 
-import urllib.request as request
 import json
 import requests
 
-while(True):
+
+def data_importing():
     response = requests.get("https://api.coindesk.com/v1/bpi/currentprice/INR.json")
     data = response.json()
 
@@ -19,3 +19,6 @@ while(True):
             json.dump(data, f, indent=4)
 
     write_json(data)
+    
+while(True):
+    data_importing()
