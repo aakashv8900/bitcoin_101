@@ -11,7 +11,7 @@ import requests
 
 
 def data_importing():
-    response = requests.get("https://api.coindesk.com/v1/bpi/currentprice/INR.json")
+    response = requests.get("https://blockchain.info/ticker")
     data = response.json()
 
     def write_json(data, filename="data.json"):
