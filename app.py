@@ -22,7 +22,7 @@ def home():
 
 @app.route("/history")
 def history():
-    candles = client.get_historical_klines("BTCUSDT", Client.KLINE_INTERVAL_1MINUTE, "3 Jan, 2009", "1 day ago UTC")
+    candles = client.get_historical_klines("BTCUSDT", Client.KLINE_INTERVAL_1MINUTE, "1 May, 2021", "Current UTC")
     processed = []
     for data in candles:
         candle = {
