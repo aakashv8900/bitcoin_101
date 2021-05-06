@@ -10,6 +10,7 @@ import flask
 from flask import Flask, url_for, request, render_template, jsonify
 import os
 from flask import Flask
+from datetime import datetime
 from binance.client import Client
 client = Client('sgoLhBuGcqkgY7TNFaRVoL0xrW9lfx0WCARDd0QzCdEAOC1PMUt00WzmZu8dbQo9', 'SqRrVJrfr2e7gHCsS1WjgBzxTXA4duZdFMaLOADCunVFbNkOfzlQFs8g9OWPFBHm')
 
@@ -22,7 +23,9 @@ def home():
 
 @app.route("/history")
 def history():
-    candles = client.get_historical_klines("BTCUSDT", Client.KLINE_INTERVAL_1MINUTE, "1 May, 2021", "Current UTC")
+    now = datetime.now()
+    today = now.strftime("%d/%m/%Y %H:%M:%S")
+    candles = client.get_historical_klines("BTCUSDT", Client.KLINE_INTERVAL_1MINUTE, "3 January, 2009", today)
     processed = []
     for data in candles:
         candle = {

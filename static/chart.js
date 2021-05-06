@@ -2,15 +2,15 @@ var chart = LightweightCharts.createChart(document.getElementById('chart'), {
 	width: 1800,
   height: 800,
 	layout: {
-		backgroundColor: '#000120',
-		textColor: 'rgba(255, 255, 255, 0.9)',
+		backgroundColor: '#131722',
+		textColor: '#d1d4dc',
 	},
 	grid: {
 		vertLines: {
-			color: 'rgba(197, 203, 206, 0.5)',
+			color: 'rgba(42, 46, 57, 0)',
 		},
 		horzLines: {
-			color: 'rgba(197, 203, 206, 0.5)',
+			color: 'rgba(42, 46, 57, 0.6)',
 		},
 	},
 	crosshair: {
@@ -25,7 +25,7 @@ var chart = LightweightCharts.createChart(document.getElementById('chart'), {
 });
 
 var candleSeries = chart.addCandlestickSeries({
-  upColor: '#00ff00',
+  upColor: '#66ff33',
   downColor: '#ff0000',
   borderDownColor: 'rgba(255, 144, 0, 1)',
   borderUpColor: 'rgba(255, 144, 0, 1)',
