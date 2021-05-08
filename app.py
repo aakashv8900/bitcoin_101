@@ -25,7 +25,7 @@ def home():
 def history():
     now = datetime.now()
     today = now.strftime("%d/%m/%Y %H:%M:%S")
-    candles = client.get_historical_klines("BTCUSDT", Client.KLINE_INTERVAL_1MINUTE, "3 January, 2009", today)
+    candles = client.get_historical_klines("BTCUSDT", Client.KLINE_INTERVAL_1MINUTE, "30 January, 2009", today)
     processed = []
     for data in candles:
         candle = {
