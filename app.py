@@ -11,7 +11,7 @@ from flask import Flask, url_for, request, render_template, jsonify
 from flask_caching import Cache
 import os
 from flask import Flask
-from datetime import datetime
+from datetime import datetime, timedelta
 from binance.client import Client
 client = Client('sgoLhBuGcqkgY7TNFaRVoL0xrW9lfx0WCARDd0QzCdEAOC1PMUt00WzmZu8dbQo9', 'SqRrVJrfr2e7gHCsS1WjgBzxTXA4duZdFMaLOADCunVFbNkOfzlQFs8g9OWPFBHm')
 
@@ -30,8 +30,10 @@ def home():
 @cache.cached(timeout=60)
 def history():
     now = datetime.now()
+    delta = now - timedelta(days=1)
+    delta = delta.strftime("%d/%B/%Y %H:%M:%S")
     today = now.strftime("%d/%m/%Y %H:%M:%S")
-    candles = client.get_historical_klines("BTCUSDT", Client.KLINE_INTERVAL_1MINUTE, "1 May, 2021", today)
+    candles = client.get_historical_klines("BTCUSDT", Client.KLINE_INTERVAL_1MINUTE, delta, today)
     processed = []
     for data in candles:
         candle = {
