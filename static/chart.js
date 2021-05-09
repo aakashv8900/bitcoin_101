@@ -33,7 +33,7 @@ var candleSeries = chart.addCandlestickSeries({
   wickUpColor: 'rgba(255, 144, 0, 1)',
 });
 
-fetch('http://0.0.0.0:5000/history')
+fetch('https://bitcoinpricelivechart.azurewebsites.net/history')
 	.then((r) => r.json())
 	.then((response) => {
 		console.log(response)
