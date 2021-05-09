@@ -8,7 +8,6 @@ Created on Fri April 09 08:02:27 2021
 
 import flask
 from flask import Flask, url_for, request, render_template, jsonify
-from flask_caching import Cache
 import os
 from flask import Flask
 from datetime import datetime, timedelta
@@ -17,9 +16,6 @@ client = Client('sgoLhBuGcqkgY7TNFaRVoL0xrW9lfx0WCARDd0QzCdEAOC1PMUt00WzmZu8dbQo
 
 app = Flask(__name__)
 
-cache = Cache()
-cache.init_app(app)
-app.config['CACHE_TYPE'] = 'SimpleCache'
 
 @app.route("/")
 def home():
@@ -27,7 +23,6 @@ def home():
 
 
 @app.route("/history")
-@cache.cached(timeout=60)
 def history():
     now = datetime.now()
     delta = now - timedelta(days=1)
