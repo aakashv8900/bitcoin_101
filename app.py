@@ -12,7 +12,7 @@ import os
 from flask import Flask
 from datetime import datetime, timedelta
 from binance.client import Client
-client = Client('sgoLhBuGcqkgY7TNFaRVoL0xrW9lfx0WCARDd0QzCdEAOC1PMUt00WzmZu8dbQo9', 'SqRrVJrfr2e7gHCsS1WjgBzxTXA4duZdFMaLOADCunVFbNkOfzlQFs8g9OWPFBHm')
+client = Client('sgoLhBuGcqkgY7TNFaRVoL0xrW9lfx0WCARDd0QzCdEAOC1PMUt00WzmZu8dbQo9', 'Secret')
 
 app = Flask(__name__)
 
