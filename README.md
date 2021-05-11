@@ -1,7 +1,9 @@
 <p align = "center">
 <h1 align="center">Bitcoin 101</h1>
 </p>
-<img src="read.gif">
+<p align = "center">
+<img src="read.gif" height="600em" />
+</p>
 
 # Details
 
