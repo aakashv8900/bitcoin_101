@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:bit_101/theme/colors.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -40,6 +39,9 @@ class _HomePageState extends State<HomePage> {
             image: new AssetImage("images/backfit.jpg"),
             fit: BoxFit.cover,
           ),
+          SizedBox(
+            height: 10,
+          ),
           new Column(
             children: <Widget>[
               new Image(image: new AssetImage("images/bit.png")),
@@ -52,7 +54,7 @@ class _HomePageState extends State<HomePage> {
                     fontWeight: FontWeight.bold),
               ),
               SizedBox(
-                height: 30,
+                height: 10,
               ),
               new Text(
                 'Real Time Bitcoin Price in 1 minute',
@@ -73,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               SizedBox(
-                height: 30,
+                height: 10,
               ),
               new MaterialButton(
                   height: 60.0,
