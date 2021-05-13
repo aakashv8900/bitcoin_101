@@ -1,8 +1,10 @@
 <p align = "center">
 <h1 align="center">Bitcoin 101</h1>
 </p>
-<p align = "center">
-<img src="main2.png" height="600em" /><img src="main1.png" height="600em" />
+
+<p float="center">
+  <img src="fix1.png" height="480em" />
+  <img src="fix2.png" height="480em" />
 </p>
 
 # Details
