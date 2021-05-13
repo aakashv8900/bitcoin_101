@@ -3,8 +3,8 @@
 </p>
 
 <p float="center">
-  <img src="fix1.png" height="480em" />
-  <img src="fix2.png" height="480em" />
+  <img src="fix1.png" height="400em" />
+  <img src="fix2.png" height="400em" />
 </p>
 
 # Details
